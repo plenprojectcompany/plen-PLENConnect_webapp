@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="robots" content="noindex">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>PLEN Connect</title>
+	<meta name="description" content="PLEN ConnectのWebApp版 Android,Windows,Macに対応" />
+	<link rel="icon" href="image/icon16.png" sizes="16x16" type="image/png" />
+	<link rel="icon" href="image/icon32.png" sizes="32x32" type="image/png" />
+	<link rel="icon" href="image/icon48.png" sizes="48x48" type="image/png" />
+	<link rel="icon" href="image/icon64.png" sizes="64x64" type="image/png" />
+	<link rel="apple-touch-icon-precomposed" href="image/icon150.png" />
+	<meta name="msapplication-TileImage" content="image/icon150.png" />
+	<meta name="msapplication-TileColor" content="#ff0000" />
+	<link rel="stylesheet" href="data/style.css" />
+	<script type="text/javascript" src="data/bluejelly.js"></script>
+</head>
+
+<body>
+	<div id="loading">
+		<div id="loading__image">
+			<img src="image/icon/Loading.png" id="loading__image_source">
+			<div id="loading__image_text"></div>
+		</div>
+	</div>
+	<div id="unsupported">
+		<div id="unsupported__list">
+			<table align="center">
+				<tr>
+					<td colspan="2" class="errorTop"><img src="image/icon/Error.png" id="ErrorImage"></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="errorTop">ご利用のブラウザには対応しておりません<br>以下のサポートリストをご確認ください</td>
+				</tr>
+				<tr>
+					<th colspan="2">サポートリスト</th>
+				</tr>
+				<tr class="top underline">
+					<td>OS</td>
+					<td>ブラウザ</td>
+				</tr>
+				<tr class="underline">
+					<td rowspan="2" class="OS">iOS</td>
+					<td><a href="https://apps.apple.com/us/app/bluefy-web-ble-browser/id1492822055">Bluefy</a></td>
+				</tr>
+				<tr>
+					<td><a href="https://apps.apple.com/us/app/plen/id1561905612">公式アプリ</a></td>
+				</tr>
+				<tr class="underline">
+					<td rowspan="3" class="OS">Android</td>
+					<td><a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome</a></td>
+				</tr>
+				<tr>
+					<td><a href="https://play.google.com/store/apps/details?id=com.opera.browser">Opera</a></td>
+				</tr>
+				<tr>
+					<td><a href="https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser">Samsung
+							Internet Browser</a></td>
+				</tr>
+				<tr class="underline">
+					<td rowspan="1" class="OS">Windows</td>
+					<td><a href="https://www.google.com/intl/ja_jp/chrome/">Chrome</a></td>
+				</tr>
+				<tr class="underline">
+					<td rowspan="1" class="OS">Mac</td>
+					<td><a href="https://www.google.com/intl/ja_jp/chrome/">Chrome</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="title">
+		<div class="title_margin"></div>
+		<div class="title_margin"></div>
+		<div id="title_main">
+			<div id="title_main__logo">
+				<img id="title_main__logo_main" src="image/title/titlelogo.svg">
+				<img id="title_main__logo_sub" src="image/title/subtitlelogo.svg">
+			</div>
+			<div id="title_main__start">
+				<div id="title_main__start_line"></div>
+				<img id="title_main__start_button" src="image/title/startbutton.svg">
+			</div>
+		</div>
+		<div class="title_margin"></div>
+		<div id="title_bottom">
+			<div id="title_bottom__version">v.0.0.0<br>© 2022 PLEN Project Company Inc.</div>
+		</div>
+	</div>
+	<div id="controller">
+		<div id="controller_margin">
+			<div id="controller_top">
+				<div id="controller_top__select">
+					<div id="controller_top__select_normal"><span class="target">NORMAL</span></div>
+					<div id="controller_top__select_box"><span class="target">BOX</span></div>
+					<div id="controller_top__select_soccer"><span class="target">SOCCER</span></div>
+					<div id="controller_top__select_dance"><span class="target">DANCE</span></div>
+				</div>
+			</div>
+			<div id="controller_bottom">
+				<div id="controller_left">
+					<div class="controller__square_h">
+						<img
+							src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIiBoZWlnaHQ9IjEiIHdpZHRoPSIxIj48L3N2Zz4=">
+						<div class="controller__square_v">
+							<div id="controller__stick_area">
+								<div id="controller__stick_border">
+									<div id="controller__stick_button">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="controller_right">
+					<div class="controller__square_h">
+						<img
+							src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIiBoZWlnaHQ9IjEiIHdpZHRoPSIxIj48L3N2Zz4=">
+						<div class="controller__square_v">
+							<div id="controller__motion_area">
+								<div id="controller__motion_border">
+									<div id="controller__motion_button">
+										<img class="normal_button" id="00" src="image/motion/normal/1_00_p_normal_lstep.png">
+										<img class="normal_button" id="01" src="image/motion/normal/2_01_p_normal_fstep .png">
+										<img class="normal_button" id="02" src="image/motion/normal/3_02_p_normal_rstep.png">
+										<img class="normal_button" id="03" src="image/motion/normal/4_03_p_normal_a-hem.png">
+										<img class="normal_button" id="04" src="image/motion/normal/5_04_p_normal_bow.png">
+										<img class="normal_button" id="05" src="image/motion/normal/6_05_p_normal_propose .png">
+										<img class="normal_button" id="06" src="image/motion/normal/7_06_p_normal_hug.png">
+										<img class="normal_button" id="07" src="image/motion/normal/8_07_p_normal_handclap.png">
+										<img class="normal_button" id="08" src="image/motion/normal/9_08_p_normal_hi-five.png">
+										<img class="box_button" id="0a" src="image/motion/box/1_10_p_box_shake.png">
+										<img class="box_button" id="0b" src="image/motion/box/2_11_p_box_lift_high.png">
+										<img class="box_button" id="0c" src="image/motion/box/3_12_p_box_lift_low.png">
+										<img class="box_button" id="0d" src="image/motion/box/4_13_p_box_receive.png">
+										<img class="box_button" id="0e" src="image/motion/box/5_14_p_box_holdup.png">
+										<img class="box_button" id="0f" src="image/motion/box/6_15_p_box_give.png">
+										<img class="box_button" id="10" src="image/motion/box/7_16_p_box_throw.png">
+										<img class="box_button" id="11" src="image/motion/box/8_17_p_box_takedown_high.png">
+										<img class="box_button" id="12" src="image/motion/box/9_18_p_box_takedown_low.png">
+										<img class="soccer_button" id="14"
+											src="image/motion/soccer/1_20_p_soccor_defense_lstep.png">
+										<img class="soccer_button" id="15" src="image/motion/soccer/2_21_p_soccer_5dash.png">
+										<img class="soccer_button" id="16"
+											src="image/motion/soccer/3_22_p_soccor_defense_rstep.png">
+										<img class="soccer_button" id="17" src="image/motion/soccer/4_23_p_soccer_l_kick.png">
+										<img class="soccer_button" id="18"
+											src="image/motion/soccer/5_24_p_soccor_long_dribble.png">
+										<img class="soccer_button" id="19" src="image/motion/soccer/6_25_p_soccer_r_kick.png">
+										<img class="soccer_button" id="1a"
+											src="image/motion/soccer/7_26_p_soccor_pass_to_left.png">
+										<img class="soccer_button" id="1b" src="image/motion/soccer/8_27_p_normal_handclap.png">
+										<img class="soccer_button" id="1c"
+											src="image/motion/soccer/9_28_p_soccor_pass_to_right.png">
+										<img class="dance_button" id="1e"
+											src="image/motion/dance/1_30_p_dance_rhythm_rstep.png">
+										<img class="dance_button" id="1f"
+											src="image/motion/dance/2_31_p_dance_rhythm_onestep.png">
+										<img class="dance_button" id="20"
+											src="image/motion/dance/3_32_p_dance_rhythm_lstep.png">
+										<img class="dance_button" id="21" src="image/motion/dance/4_33_p_dance_kimepose.png">
+										<img class="dance_button" id="22" src="image/motion/dance/5_34_p_dance_kusshin.png">
+										<img class="dance_button" id="23" src="image/motion/dance/6_35_p_dance_wiggle.png">
+										<img class="dance_button" id="24" src="image/motion/dance/7_36_p_dance_rhythm_back.png">
+										<img class="dance_button" id="25" src="image/motion/dance/8_37_p_dance_bow.png">
+										<img class="dance_button" id="26" src="image/motion/dance/9_38_p_dance_twist.png">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="js/PLENConnect.js"></script>
+
+</html>
