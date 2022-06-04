@@ -351,6 +351,20 @@ body::-webkit-scrollbar {
   justify-content: center;
 }
 
+/* 横向きの場合のスタイル */
+@media screen and (orientation: landscape) {
+  #controller_bottom{
+    flex-direction: row;
+  }
+}
+
+/* 縦向きの場合のスタイル */
+@media screen and (orientation: portrait) {
+  #controller_bottom{
+    flex-direction: column;
+  }
+}
+
 #controller_left{
   height: 100%;
 

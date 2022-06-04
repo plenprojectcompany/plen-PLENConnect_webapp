@@ -355,7 +355,7 @@ document.ondragstart = function () {
 // タイトル画面 ==================================
 function ShowTitle() {
 	progress = ''
-	Scene.Show('controller')
+	//Scene.Show('controller')
 	Scene.Show('title')
 	Scene.DestroyLoading(500)
 }
