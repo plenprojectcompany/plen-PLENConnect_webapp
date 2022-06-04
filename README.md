@@ -1,9 +1,9 @@
-﻿ESPRacer for WebApp | PLEN Project Company Inc.
+﻿PLEN Connect for WebApp | PLEN Project Company Inc.
 ===============================================================================
 
-## ESPRacer for WebApp
+## PLEN Connect for WebApp
 
-[ESPRacer for WebApp](https://plenprojectcompany.github.io/ESPRacer-webapp/)
+[PLEN Connect for WebApp](https://plenprojectcompany.github.io/plen-PLENConnect_webapp/)
 
 ## Copyright (c) 2021,
 - [Isaki](https://github.com/IsakiMatsubara)
