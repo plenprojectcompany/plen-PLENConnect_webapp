@@ -44,6 +44,14 @@ body {
   /* IE, Edge 対応 */
   scrollbar-width: none;
   /* Firefox 対応 */
+
+  overflow: hidden;
+}
+
+#container {
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 body::-webkit-scrollbar {
@@ -354,14 +362,14 @@ body::-webkit-scrollbar {
 /* 横向きの場合のスタイル */
 @media screen and (orientation: landscape) {
   #controller_bottom{
-    flex-direction: row;
+    /* flex-direction: row; */
   }
 }
 
 /* 縦向きの場合のスタイル */
 @media screen and (orientation: portrait) {
   #controller_bottom{
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 }
 
