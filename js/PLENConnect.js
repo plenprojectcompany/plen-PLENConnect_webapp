@@ -115,6 +115,8 @@ class BleClass {
 		this.ble.setUUID("TXdata", "e1f40469-cfe1-43c1-838d-ddbc9dafdde6", "f90e9cfe-7e05-44a5-9d75-f13644d6f645");
 		this.ble.setUUID("BatteryLebel", "e1f40469-cfe1-43c1-838d-ddbc9dafdde6", "2a19");
 		this.CharacteristicIdName = ''
+		this.lastWriteUUID = "TXdata"
+		this.lastWriteString = ""
 	}
 
 	Scan(id) {
@@ -125,7 +127,13 @@ class BleClass {
 	}
 
 	Write(uuid, string) {
+		this.lastWriteUUID = uuid
+		this.lastWriteString = string
 		this.ble.write(uuid, string.split('').map(char => char.charCodeAt(0)))
+	}
+
+	ReWrite(){
+		this.Write(this.lastWriteUUID,this.lastWriteString)
 	}
 }
 
@@ -161,7 +169,10 @@ Ble.ble.onError = function (error) {
 		} else if (progress == 'onScan') {
 			// 認証失敗
 			Ble.ble.connectGATT(Ble.CharacteristicIdName)
-		} else if (progress == 'onConnectGATT' || progress == 'onDisconnect') {
+		} else if (progress == 'onConnectGATT') {
+			// 送信失敗
+			Ble.ReWrite()
+		} else if (progress == 'onDisconnect') {
 			// 接続切れ
 			OnDisconnected()
 		} else {
